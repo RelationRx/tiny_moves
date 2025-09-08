@@ -1,0 +1,24 @@
+defaults:
+  #### agents
+  - composites/diagnose_and_game_master@agent_options.diagnose_and_game_master
+
+  # expand
+  - composites/expand_using_reactome_index@agent_options.expand_using_corpus
+  - composites/expand_using_blackbox@agent_options.expand_blackbox
+
+  # prune
+  - moves/prune@agent_options.prune
+
+  # debate
+  - composites/setup_debate_conclude@agent_options.player_debate
+
+  - ../prompt/hypothesis_operations_detailed@prompt
+  - _self_
+
+chat_history: null
+extra_context: null
+
+chat_parameters:
+  max_rounds: 50
+  timeout: 30
+  verbose: true

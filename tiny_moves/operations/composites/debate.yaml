@@ -1,0 +1,17 @@
+defaults:
+  - ../move_components/claimsmith@claimsmith_options
+  - _self_
+
+agent_type: "ClashOfClaims"
+name: "clash_of_claims"
+system_message: |
+  You are the Tournament Manager overseeing the "Clash of Claims," a structured scientific debate tournament.
+
+
+max_round: 10
+num_claimsmiths: 2
+input_message_type: "latest"
+output_message_type: "summary"
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+description: "An agent that manages a scientific hypothesis debate tournament, facilitating the generation, critique, and evolution of research hypotheses."

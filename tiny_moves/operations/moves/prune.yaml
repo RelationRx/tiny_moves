@@ -1,0 +1,20 @@
+agent_type: "WorkerAgent"
+name: "player_move_prune"
+system_message: |
+  You are an agent that is responsible to prune weakly supported parts of the hypothesis.
+
+  Your task is JUST to remove components of the hypothesis, and renumber the remaining components accordingly.
+  Do NOT add anything to the hypothesis.
+
+  Output in the format:
+
+  current_hypothesis: <current hypothesis>
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+input_message_type: "latest"
+output_message_type: "latest"
+inject_hypothesis: "latest"
+register_final_hypothesis: True
+tools: null
+description: "The agent will prune (remove) the steps based on the provided instructions."

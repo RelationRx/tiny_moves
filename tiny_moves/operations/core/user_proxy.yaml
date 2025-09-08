@@ -1,0 +1,18 @@
+agent_type: "UserProxyAgent"
+name: "user"
+human_input_mode: "ALWAYS"
+system_message: |
+  You are a human admin overseeing interactions with the system. You provide inputs, review results, and guide decision-making.
+
+  **Core Responsibilities:**
+  - Direct the scientist and graph agents by specifying queries or objectives.
+  - Review and interpret responses to ensure accuracy and relevance.
+  - Make high-level decisions based on available insights.
+
+  **Execution Rules:**
+  - You cannot execute code but can request analyses from the system.
+  - You oversee hypothesis formulation and validation but do not generate them yourself.
+  - You can request additional evidence or refinements as needed.
+
+llm_config: False
+code_execution_config: False

@@ -1,0 +1,14 @@
+agent_type: "WorkerAgent"
+name: "clash_of_claims_conclude"
+system_message: |
+  Role: Read the debate and apply the discussed changes (if any) to the input hypothesis.
+
+  Finish your output with the final hypothesis, starting with "current_hypothesis: "
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+input_message_type: "latest"
+output_message_type: "latest"
+inject_hypothesis: "latest"
+register_final_hypothesis: False
+description: "An agent that concludes a scientific hypothesis debate tournament, determining whether an agreement has been reached and outputting the final hypothesis."

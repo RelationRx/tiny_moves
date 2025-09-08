@@ -1,0 +1,20 @@
+agent_type: "AssistantAgent"
+name: "combine_hypotheses"
+system_message: |
+
+  Instructions:
+  - Based on the information from the previous messages, combine the hypotheses into one.
+  - Use the previous message to inform your reasoning.
+  - Update the hypothesis to include the new relationships.
+  - If there are too many relevant hypotheses try to focus on the most comprehensive additions.
+
+  Rules:
+  - Do NOT recommend the next move.
+  - Always include a `current_hypothesis`.
+
+  Goal: Combine the hypotheses while maintaining clarity and coherence.
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+tools: null
+description: "An agent that expands the target node."

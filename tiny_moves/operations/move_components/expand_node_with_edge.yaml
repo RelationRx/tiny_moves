@@ -1,0 +1,21 @@
+agent_type: "AssistantAgent"
+name: "expand_node_with_edge"
+system_message: |
+
+  Instructions:
+  - Based on the information from the previous messages, expand the target node with only a single new connection.
+  - Use the previous message to inform your reasoning.
+  - Update the hypothesis to include ONLY the new relationship.
+
+  Rules:
+  - Do NOT recommend the next move.
+  - Always return `current_hypothesis: ` - this should be the entirety of the given hypothesis
+    with the single new relationship updated
+  - If multiple relationships are present choose the most relevant one.
+
+  Goal: Expand the biological richness of the hypothesis while maintaining clarity and coherence.
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+tools: null
+description: "An agent that expands the target node with a new connection."

@@ -1,0 +1,22 @@
+# requirements.txt for tiny_moves_private
+# Add your package dependencies below
+autogen
+pydantic
+boto3
+botocore
+omegaconf
+hydra-core
+jinja2
+html2text
+requests
+bs4
+torch-geometric
+sentence-transformers
+transformers
+faiss-cpu
+tqdm
+pandas
+matplotlib
+json_repair
+json5
+gilda

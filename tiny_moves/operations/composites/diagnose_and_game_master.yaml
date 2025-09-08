@@ -1,0 +1,16 @@
+defaults:
+  # NB that the agent move order is defined by the {int}_{name} in the agent_move list
+  - ../moves/diagnose@agents.1_diagnose
+  - ../core/game_master@agents.2_game_master
+  - _self_
+
+agent_type: "SequentialChatAgent"
+name: "game_master"
+input_message_type: "none"
+output_message_type: "latest"
+system_message: |
+  ROUNDROBIN CHAT; NO SYSTEM MESSAGE NECESSARY
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+description: "An agent diagnoses the problem and then acts as a game master to guide the conversation."

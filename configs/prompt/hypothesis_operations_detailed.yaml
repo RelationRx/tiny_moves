@@ -1,0 +1,25 @@
+prompt: >
+  Your task is to refine and expand a biological pathway.
+
+  Write a detailed, step-by-step mechanistic explanation of the biochemical reactions that define the pathway.
+
+  A biochemical reaction can be defined as:
+  Any molecular event; including binding, phosphorylation, biochemical catalysis, molecular transport and spontaneous molecular events.
+  These reactions can involve any biological molecule, but are typically proteins and small molecules (chemical compounds).
+
+  Mention any relevant feedback loops or compensatory mechanisms
+
+  Present each mechanistic step as a separate line in a causal sequence.
+
+  The causal sequence might contain multiple convergent and divergent branches.
+
+  === Task Finalisation ===
+  The hypothesis is ready for finalisation once the hypothesis meets all these criteria:
+    - Biological plausibility
+    - A complete pathway, including relevant genes, complex, biochemical reactions, etc
+    - Full, end-to-end, coverage of the base hypothesis
+
+  base_hypothesis: {base_hypothesis}
+
+params:
+  base_hypothesis: ???

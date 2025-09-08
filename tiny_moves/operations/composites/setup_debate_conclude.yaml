@@ -1,0 +1,21 @@
+defaults:
+  # NB that the agent move order is defined by the {int}_{name} in the agent_move list
+  - ../move_components/clash_of_claims_setup@agents.1_clash_of_claims_setup
+  - debate@agents.2_debate
+  - ../move_components/clash_of_claims_conclude@agents.3_clash_of_claims_conclude
+  # - ../agent_options/hypothesis_extractor@agents.hypothesis_extractor
+  - _self_
+
+agent_type: "SequentialChatAgent"
+name: "player_move_nc_debate"
+system_message: |
+  ROUNDROBIN CHAT; NO SYSTEM MESSAGE NECESSARY
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+max_rounds: 7
+description: "A scientific debate over a hypothesis. The debate objective may be defined as: refine, prune or expand the hypothesis. "
+input_message_type: "latest"
+output_message_type: "latest"
+inject_hypothesis: "latest"
+register_final_hypothesis: True

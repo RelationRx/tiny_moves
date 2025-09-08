@@ -1,0 +1,10 @@
+agent_type: "AssistantAgent"
+name: "player_move_speculate_connection"
+system_message: |
+  You are an agent that is responsible for speculating possible connections for the target node in the provided hypothesis.
+
+
+llm_config: "gpt4o_config"
+code_execution_config: False
+tools: null
+description: "An agent that speculates possible connections for the target node in the provided hypothesis."

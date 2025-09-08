@@ -1,0 +1,18 @@
+defaults:
+  # NB that the agent move order is defined by the {int}_{name} in the agent_move list
+  - ../move_components/identify_weak_components@agents.1_weakness_identifier
+  - ../move_components/prune_node@agents.2_prune_node
+  - _self_
+
+agent_type: "SequentialChatAgent"
+name: "prune_using_blackbox"
+input_message_type: "latest"
+output_message_type: "latest"
+inject_hypothesis: "latest"
+register_final_hypothesis: True
+system_message: |
+  ROUNDROBIN CHAT; NO SYSTEM MESSAGE NECESSARY
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+description: "An agent prunes/removes a weak component from the current hypothesis."

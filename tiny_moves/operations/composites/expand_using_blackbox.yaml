@@ -1,0 +1,18 @@
+defaults:
+  # NB that the agent move order is defined by the {int}_{name} in the agent_move list
+  - ../move_components/retrieve_speculate_connections@agents.1_speculator
+  - ../move_components/expand_node_with_edge@agents.2_expand_node
+  - _self_
+
+agent_type: "SequentialChatAgent"
+name: "expand_target_node_with_blackbox"
+input_message_type: "latest"
+output_message_type: "latest"
+inject_hypothesis: "latest"
+register_final_hypothesis: True
+system_message: |
+  ROUNDROBIN CHAT; NO SYSTEM MESSAGE NECESSARY
+
+llm_config: "chatgpt_4o_config"
+code_execution_config: False
+description: "An agent expands a target node by speculating about possible connections."

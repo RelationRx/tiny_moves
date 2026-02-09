@@ -68,7 +68,7 @@ If you use this code for your research, please cite our paper:
 
 ## License
 
-Licensed under Apache License 2.0. 
+Licensed under MIT License. 
 
 ## Contact
 

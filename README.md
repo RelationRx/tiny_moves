@@ -68,7 +68,7 @@ If you use this code for your research, please cite our paper:
 
 ## License
 
-Licensed under MIT License. 
+Licensed under [MIT License](LICENSE). 
 
 ## Contact
 

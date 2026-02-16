@@ -2,14 +2,13 @@
 
 # Tiny Moves: Game-based Hypothesis Refinement
 
-**Authors:** Rogier Hintzen*, Agnieszka Dobrowolska*, Martin Balla*, Karl Gemayel, Sabine Reichert, Thomas Charman, Anna Gogleva  
+**Authors:** Agnieszka Dobrowolska*, Rogier Hintzen*, Martin Balla*, Karl Gemayel, Sabine Reichert, Thomas Charman, Jen Ning Lim, Lindsay Edwards, Anna Gogleva
 *These authors contributed equally.*
 
-**Workshop:** AI for Science Workshop @ NeurIPS 2025
 
 ## Abstract
 
-Scientific discovery is an iterative process, yet most machine learning approaches treat it as an end-to-end prediction task, limiting interpretability and alignment with scientific reasoning workflows. We introduce The Hypothesis Game, a symbolic, game-based framework where a system of agents refines hypotheses through a fixed set of reasoning moves (a reasoning grammar). Inspired by the idea that scientific progress often relies on small, incremental changes, our framework emphasizes “tiny moves” as the building blocks of incremental hypothesis evolution. We evaluate the approach on pathway-level reasoning tasks derived from Reactome, focusing on reconstruction from partial cues and recovery of corrupted hypotheses. Across 820 reconstruction and 2880 corruption experiments, it matches strong prompting baselines on reconstruction and achieves superior precision and error recovery in corruption. Beyond accuracy, it produces concise, interpretable hypotheses and enables controllable reasoning, highlighting the potential of game-based reasoning for scientific discovery.
+Most machine learning approaches to scientific discovery frame hypotheses as end-to-end predictions, obscuring the incremental structure of scientific reasoning. We propose The Hypothesis Game, a symbolic formalism for hypothesis refinement in which LLM agents operate on a shared hypothesis state using a fixed grammar of reasoning moves. The framework is motivated by the observation that scientific progress often proceeds through small, localized revisions, grounded in domain context, rather than extensive rewrites. We instantiate a minimal game with LLM agents and evaluate it on pathway-level mechanistic refinement tasks. In the primary setting of corruption recovery, where hypotheses contain controlled errors, the game-based approach consistently removes more errors and achieves higher precision than strong prompting baselines, while preserving valid structure through incremental edits. In a secondary reconstruction setting from partial cues, it performs comparably to the strongest baseline, indicating that explicit move-based refinement remains competitive even when ground-truth recovery is difficult. These findings support game-based reasoning as a principled route to more controllable, interpretable, and transferable hypothesis refinement systems for scientific discovery.
 
 ## Repository Structure
 
@@ -57,12 +56,14 @@ python  tiny_moves/entry_points/chat.py --config_name tiny_moves_no_corpus.yaml
 If you use this code for your research, please cite our paper:
 
 ```bibtex
-@inproceedings{hintzen2025tinymoves,
-	title={Tiny Moves: Game-based Hypothesis Refinement},
-	author={Hintzen, Rogier and Dobrowolska, Agnieszka and Balla, Martin and Gemayel, Karl and Reichert, Sabine and Charman, Thomas and Gogleva, Anna},
-	booktitle={Proceedings of the Neural Information Processing Systems (NeurIPS), AI for Science Workshop},
-	year={2025},
-	url={https://github.com/RelationRx/tiny_moves_private}
+@misc{dobrowolska2026tinymovesgamebasedhypothesis,
+      title={Tiny Moves: Game-based Hypothesis Refinement}, 
+      author={Agnieszka Dobrowolska and Rogier Hintzen and Martin Balla and Karl Gemayel and Sabine Reichert and Thomas Charman and Jen Ning Lim and Lindsay Edwards and Anna Gogleva},
+      year={2026},
+      eprint={2602.09801},
+      archivePrefix={arXiv},
+      primaryClass={cs.MA},
+      url={https://arxiv.org/abs/2602.09801}, 
 }
 ```
 
@@ -72,4 +73,4 @@ Licensed under [MIT License](LICENSE).
 
 ## Contact
 
-For questions or collaborations, please contact [corresponding author email].
+For questions or collaborations, please contact anna.gogleva@relationrx.com.
